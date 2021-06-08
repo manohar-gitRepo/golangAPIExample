@@ -1,6 +1,9 @@
 FROM golang
 
-RUN go mod init github.com/golangbot/mysqltutorial
+#RUN go mod init github.com/golangbot/mysqltutorial
+
+RUN go get -u github.com/go-sql-driver/mysql
+
 RUN go get github.com/manohar-gitRepo/golangAPIExample
 
 WORKDIR /go/src/app
