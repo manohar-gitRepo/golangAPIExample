@@ -1,6 +1,6 @@
 FROM golang
 
-RUN go get https://github.com/manohar-gitRepo/golangAPIExample
+RUN go get github.com/manohar-gitRepo/golangAPIExample
 
 WORKDIR /go/src/app
 
