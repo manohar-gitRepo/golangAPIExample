@@ -1,0 +1,10 @@
+FROM golang
+
+COPY C:/GOPoj/api.go .
+
+RUN go mod download
+
+
+EXPOSE 8080
+
+CMD go run api.go
