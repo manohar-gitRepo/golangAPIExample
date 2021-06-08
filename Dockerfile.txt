@@ -1,10 +1,16 @@
 FROM golang
 
-COPY C:/GOPoj/api.go .
+RUN go get https://github.com/manohar-gitRepo/golangAPIExample
 
-RUN go mod download
+WORKDIR /go/src/app
 
+#copy files
+RUN cp  /go/src/github.com/manohar-gitRepo/golangAPIExample/api.go /go/src/app
 
-EXPOSE 8080
+#gooo build
+RUN go build /go/src/app/api.go
 
-CMD go run api.go
+EXPOSE 8000
+
+# run the binary
+CMD ["/go/src/app/api"]
