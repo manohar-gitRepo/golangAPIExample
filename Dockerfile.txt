@@ -9,7 +9,7 @@ RUN go get github.com/manohar-gitRepo/golangAPIExample
 WORKDIR /go/src/app
 
 #copy files
-RUN cp  root/golangAPIExample/api.go /go/src/app
+RUN cp  /root/golangAPIExample/api.go /go/src/app
 
 #gooo build
 RUN go build /go/src/app/api.go
