@@ -1,3 +1,5 @@
+FROM golang
+
 COPY . /golangAPIExample
 WORKDIR /golangAPIExample
 #copy files
