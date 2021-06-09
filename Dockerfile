@@ -11,9 +11,9 @@ WORKDIR /golangAPIExample
 # COPY . /golangAPIExample
 
 #gooo build
-RUN go build /golangAPIExample/api.go
+RUN go build /golangAPIExample/restapi.go
 
 EXPOSE 8000
 
 # run the binary
-CMD ["/golangAPIExample/api"]
+CMD ["/golangAPIExample/restapi"]
