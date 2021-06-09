@@ -6,15 +6,15 @@ RUN go get -u github.com/go-sql-driver/mysql
 
 RUN go get github.com/manohar-gitRepo/golangAPIExample
 
-WORKDIR /go/src/app
+WORKDIR /golangAPIExample
 
 #copy files
-COPY api.go /go/src/app
+COPY api.go /golangAPIExample
 
 #gooo build
-RUN go build /go/src/app/api.go
+RUN go build /golangAPIExample/api.go
 
 EXPOSE 8000
 
 # run the binary
-CMD ["/go/src/app/api"]
+CMD ["/golangAPIExample/api"]
